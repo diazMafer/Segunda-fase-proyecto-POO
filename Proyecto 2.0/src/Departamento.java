@@ -33,29 +33,28 @@ public class Departamento{
             lugar = new ArrayList<>();
             
             
-            Hotel h1 = new Hotel("El paraiso", "paraiso@gmail.com", "Horario: 8:00 - 22:00", "Ambiente pacifico", "3-26 calle pachic, Alta Verapaz", "2208-6396", 0,0,0,0,0, "Alta Verapaz",0);
+            Hotel h1 = new Hotel("Hote","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h1);
-            Hotel h2 = new Hotel("Casa San Carlos", "sanCarlosGT@gmail.com", "Horario: 00:00 - 22:00", "Cercania en toda la ciudad, comida de muy buena calidad", "Avenida las Americas, Guatemala", "2200-0000", 0,0,0,0,0, "Guatemala",0);
+            Hotel h2 = new Hotel("Hote2","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h2);
-            Hotel h3 = new Hotel("Grand Tikal Futura", "tikalGTM@gmail.com", "Horario: 04:30 - 23:00", "Habitaciones comodas. Excelente limpieza", "Calzada Roosevelt zona 11, Guatemala", "2528-6541", 0,0,0,0,0, "Guatemala",0);
+            Hotel h3 = new Hotel("Hote2","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h3);
-            Hotel h4 = new Hotel("Posada San Rafael", "serviciosSR@gmail.com", "Horario: 10:00 - 20:00", "Horario de entrada demasiado corto", "3-26 calle el portal, Santa Rosa", "7308-4326", 0,0,0,0,0, "Santa Rosa",0);
+            Hotel h4 = new Hotel("Hote2","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h4);
-            Hotel h5 = new Hotel("Utz Tzaba", "utzTzaba@gmail.com", "Horario: 05:40 - 22:10", "Cercania a la playa, buenos cocos!", "Aldea El Pumpo, Monterrico, Santa Rosa", "2600-0150", 0,0,0,0,0, "Santa Rosa",0);
+            Hotel h5 = new Hotel("Hote2","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h5);
-            Hotel h6 = new Hotel("Cavanna Inn", "cavannaBannana@gmail.com", "Horario: 00:30 - 18:00", "Buen precio", "Av Principal zona 7, Escuintla", "2528-4421", 0,0,0,0,0, "Escuintla",0);
+            Hotel h6 = new Hotel("Hote2","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
             hotelitos.add(h6);
-            Restaurante r1 = new Restaurante("Guatemala", "Fridays", "8:00-22:00", "comida tipo estadunidense","Miraflores zona 11", "2435-8989", 0,0,0,0,0,0 );
-            Restaurante r2 = new Restaurante("Guatemala", "Toro pez", "12:00-21:00", "parrilladas", "Zona 9 ciudad ", "2424-2424", 0,0,0,0,0,0);
-            Restaurante r3 = new Restaurante("Guatemala", "El parisino", "7:00-7:00", "panaderia y restaurante gourment", "plaza musical 20 av. zona 10", "2424-2424",0,0,0,0,0,0);
-            Restaurante r4 = new Restaurante("Santa Rosa", "El saltamontes", "9:00-22:00", "comida rica", "Aldea el pumpo, Monterrico, Santa Rosa", "2222-22222",0,0,0,0,0,0);
-            Restaurante r5 = new Restaurante("Santa Rosa", "Brisas del mar", "18", "cercania de la playa abierto las 24hrs", "Aldea el pumpo, Monterrico, Santa Rosa", "2221-2121", 0,0,0,0,0,0);
-            restaurante.add(r1);
+            Restaurante r1 = new Restaurante("restaurante cool", "dasdsa","Guatemala","sads", 0.0, 0, 0, 0, 0, 0,"7-14","telefono: 55");
+            Restaurante r2 = new Restaurante("restaurante cool", "dasdsa","Guatemala","sads", 0.0, 0, 0, 0, 0, 0,"7-14","telefono: 55");
+            Restaurante r3 = new Restaurante("restaurante cool", "dasdsa","Guatemala","sads", 0.0, 0, 0, 0, 0, 0,"7-14","telefono: 55");
+            Restaurante r4 = new Restaurante("restaurante cool", "dasdsa","Guatemala","sads", 0.0, 0, 0, 0, 0, 0,"7-14","telefono: 55");
+            Restaurante r5 = new Restaurante("restaurante cool", "dasdsa","Guatemala","sads", 0.0, 0, 0, 0, 0, 0,"7-14","telefono: 55");
             restaurante.add(r2);
             restaurante.add(r3);
             restaurante.add(r4);
             restaurante.add(r5);
-            LugarT l1 = new LugarT("Playa Monterrico", "Caluroso agradable", "24 horas", "Santa Rosa",0,0,0,0,0,0);
+            LugarT l1 = new LugarT("nombre lugar","address","Guate", "construccion",0.0,0,0,0, 0, 0, "6-8pm");
             lugar.add(l1);
             
             

@@ -30,5 +30,8 @@ public class LugarT extends Lugar{
         public String getHorario(){
 		return horario;
 	}
+        public String getDepartamento(){
+            return departamento;
+        }
         
 }

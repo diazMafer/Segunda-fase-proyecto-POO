@@ -15,18 +15,9 @@ import java.sql.Connection;
  * @author Mafer
  */
 public class Conectar {
-    Connection conectar;
-    Statement stm;
-    public ConexionSQL(){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conectar = DriverManager.getConnection();
-            Statement stm = conectar.createStatement();
-        }catch(Exception e){
-            
-        }
+
     }
     
     
     
-}
+

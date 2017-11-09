@@ -47,6 +47,9 @@ public class Hotel extends Lugar {
     public String getTel() {
         return telefono;
     }
+    public String getDepartamento(){
+        return departamento;
+    }
     
      @Override
     public String toString(){
