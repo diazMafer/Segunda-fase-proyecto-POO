@@ -7,8 +7,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import org.mongodb.morphia.query.UpdateOperations;
 
-<<<<<<< HEAD
-import java.sql.Connection;
 
 
 
@@ -19,18 +17,9 @@ import java.sql.Connection;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author Mafer
- */
-public class Conectar {
 
-    }
-    
-    
     
 
-=======
 public class Conectar{
     private Datastore ds;
     private List<Hotel> hoteles;
@@ -108,4 +97,3 @@ public class Conectar{
     
     
 }
->>>>>>> febf8d2d8614a37cdfac86995af57fffe11ad609
