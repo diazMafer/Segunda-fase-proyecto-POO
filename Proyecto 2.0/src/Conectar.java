@@ -8,17 +8,7 @@ import javax.swing.JOptionPane;
 import org.mongodb.morphia.query.UpdateOperations;
 
 
-
-
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-    
+ 
 
 public class Conectar{
     private Datastore ds;
