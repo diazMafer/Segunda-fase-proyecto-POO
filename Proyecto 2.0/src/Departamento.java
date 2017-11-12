@@ -20,6 +20,7 @@ public class Departamento{
 	private ArrayList<Actividad> actividad; 
 	private ArrayList<Evento> evento; 
 	private ArrayList<LugarT> lugar;
+        private ArrayList<Usuario> users;
         
         /**
          * Constructor for objects of class Departamento
@@ -31,6 +32,7 @@ public class Departamento{
             actividad = new ArrayList<>();
             evento = new ArrayList<>();
             lugar = new ArrayList<>();
+            users = new ArrayList<>();
             
             
             Hotel h1 = new Hotel("Hote","12 Av Zona 1.","Guatemala","descripcion",0.0, 0, 0, 0, 0, 0, "telefono: 223332","estecorreonoesfalso@gmail.com");
@@ -828,13 +830,28 @@ public class Departamento{
         return lugares;
          
      }
-     
-     
-    
-     
-    
-    
-    
+      //-----------------------------------------------------------------------------------------
+      
+      //A partir de aqui van las operaciones de USUARIOS
+      
+      
+      
+      public void crearUser(String user, String email, String pw, boolean admin){
+          Usuario x = new Usuario(user, email, pw, admin);
+          users.add(x);
+      }
+      public boolean buscarUser(String email, String pw){
+          boolean encontrado=false;
+          for(Usuario x: users){
+              if(x.getEmail().equals(email) && x.getPw().equals(pw)){
+                  encontrado=true;
+              } else {
+                  encontrado=false;
+              }
+          }
+          return encontrado;
+      }
+      
     
 }
 
