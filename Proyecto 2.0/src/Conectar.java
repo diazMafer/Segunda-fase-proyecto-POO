@@ -8,7 +8,9 @@ import javax.swing.JOptionPane;
 import org.mongodb.morphia.query.UpdateOperations;
 
 
+ 
 
+<<<<<<< HEAD
 
 
 /*
@@ -21,6 +23,8 @@ import org.mongodb.morphia.query.UpdateOperations;
  *
  * @author Mafer
  */
+=======
+>>>>>>> 9854e5d9ea7c2534fe61e5cf1ed042e5ff094307
 public class Conectar{
     private Datastore ds;
     private List<Hotel> hoteles;
