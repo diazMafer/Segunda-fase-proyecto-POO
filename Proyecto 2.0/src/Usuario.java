@@ -1,3 +1,6 @@
+
+import org.mongodb.morphia.annotations.Embedded;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,11 +11,14 @@
  *
  * @author Mafer
  */
+@Embedded
 public class Usuario {
     private String nombre;
     private String email;
     private String  pw;
     private boolean admin;
+    
+    public Usuario(){}
     
     public Usuario(String nombre, String email, String pw, boolean admin){
         this.nombre=nombre;
@@ -32,7 +38,5 @@ public class Usuario {
     public String getEmail(){
         return email;
     }
-    public String getPw(){
-        return pw;
-    }
+   
 }

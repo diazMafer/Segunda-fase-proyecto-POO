@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import javax.swing.JOptionPane;
 public class MeetGUI extends javax.swing.JFrame {
 
@@ -25,6 +26,7 @@ public class MeetGUI extends javax.swing.JFrame {
     private GraficaL gl;
     private String nombreH;
     private int vectorCali[];
+    private Conectar cc;
     public MeetGUI() {
         initComponents();
         depa = new Departamento();
@@ -33,6 +35,7 @@ public class MeetGUI extends javax.swing.JFrame {
         gl = new GraficaL();
         nombreH="";
         vectorCali = new int[5];
+        cc = new Conectar();
     }
 
     /**
@@ -485,28 +488,28 @@ public class MeetGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String nombredepa = String.valueOf(jComboBox1.getSelectedItem());
-        jTextArea1.setText(depa.busquerAct(nombredepa) + "\n" +"\nHoteles:" + "\n" +depa.busquerHoteles(nombredepa) + depa.busquerEvento(nombredepa) + depa.busquerLugar(nombredepa) + depa.busquerRestaurante(nombredepa));
+        //jTextArea1.setText(depa.busquerAct(nombredepa) + "\n" +"\nHoteles:" + "\n" +depa.busquerHoteles(nombredepa) + depa.busquerEvento(nombredepa) + depa.busquerLugar(nombredepa) + depa.busquerRestaurante(nombredepa));
                 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rbHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbHotelActionPerformed
         // TODO add your handling code here:
-        ArrayList<Hotel> nombres = depa.busquerNombreH(String.valueOf(jComboBox1.getSelectedItem()));
-        for(int i=0; i<nombres.size(); i++){
-            cbNombre.addItem(String.valueOf(nombres.get(i).getNombre()));
-                   
+        ArrayList<String> nombres = depa.nombresHoteles(String.valueOf(jComboBox1.getSelectedItem()));
+        for(int i=0; i<nombres.size();i++){
+            cbNombre.addItem(nombres.get(i));
         }
         
     }//GEN-LAST:event_rbHotelActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
         try{
         if(rbHotel.isSelected()){
             String nombredepa = String.valueOf(cbNombre.getSelectedItem());
-            jTextArea1.setText(depa.infoHotel(nombredepa));
+           jTextArea1.setText(depa.infoHotel(nombredepa));
             nombreH = String.valueOf(cbNombre.getSelectedItem());
-            vectorCali = depa.cantidadCH(nombreH);
+            //vectorCali = depa.cantidadCH(nombreH);
             pb1.setValue(vectorCali[0]);
             pb2.setValue(vectorCali[1]);
             pb3.setValue(vectorCali[2]);
@@ -519,7 +522,7 @@ public class MeetGUI extends javax.swing.JFrame {
             
         }else if (rbEvento.isSelected()){
             String nombredepa = String.valueOf(cbNombre.getSelectedItem());
-            jTextArea1.setText(depa.infoEvento(nombredepa));
+           jTextArea1.setText(depa.infoEvento(nombredepa));
             nombreH = String.valueOf(cbNombre.getSelectedItem());
             
             
@@ -528,7 +531,7 @@ public class MeetGUI extends javax.swing.JFrame {
             String nombredepa = String.valueOf(cbNombre.getSelectedItem());
             jTextArea1.setText(depa.infoRes(nombredepa));
             nombreH=String.valueOf(cbNombre.getSelectedItem());
-            vectorCali = depa.cantidadCR(nombreH);
+            //vectorCali = depa.cantidadCR(nombreH);
             pb1.setValue(vectorCali[0]);
             pb2.setValue(vectorCali[1]);
             pb3.setValue(vectorCali[2]);
@@ -542,7 +545,7 @@ public class MeetGUI extends javax.swing.JFrame {
             jTextArea1.setText(depa.infoLugar(nombredepa));
            
             nombreH=String.valueOf(cbNombre.getSelectedItem());
-            vectorCali = depa.cantidadCL(nombreH);
+            //vectorCali = depa.cantidadCL(nombreH);
             pb1.setValue(vectorCali[0]);
             pb2.setValue(vectorCali[1]);
             pb3.setValue(vectorCali[2]);
@@ -565,34 +568,42 @@ public class MeetGUI extends javax.swing.JFrame {
 
     private void rbLugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbLugarActionPerformed
         // TODO add your handling code here:
-        ArrayList<LugarT> nombres = depa.buscarNombreL(String.valueOf(jComboBox1.getSelectedItem()));
+        
+        ArrayList<String> nombres = depa.nombresLugarT(String.valueOf(jComboBox1.getSelectedItem()));
         for(int i=0; i<nombres.size(); i++){
-            cbNombre.addItem(nombres.get(i).getNombre());
+            cbNombre.addItem(nombres.get(i));
         }
+        
     }//GEN-LAST:event_rbLugarActionPerformed
 
     private void rbResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbResActionPerformed
         // TODO add your handling code here:
-        ArrayList<Restaurante> nombres = depa.buscarNombreR(String.valueOf(jComboBox1.getSelectedItem()));
+        
+        ArrayList<String> nombres = depa.nombresRestaurantes(String.valueOf(jComboBox1.getSelectedItem()));
         for(int i=0; i<nombres.size(); i++){
-            cbNombre.addItem(nombres.get(i).getNombre());
+            cbNombre.addItem(nombres.get(i));
         }
+        
     }//GEN-LAST:event_rbResActionPerformed
 
     private void rbEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEventoActionPerformed
         // TODO add your handling code here:
-        ArrayList<Evento> nombres = depa.buscarNombreE(String.valueOf(jComboBox1.getSelectedItem()));
+        
+        ArrayList<String> nombres = depa.nombresEvento(String.valueOf(jComboBox1.getSelectedItem()));
         for(int i=0; i<nombres.size(); i++){
-            cbNombre.addItem(nombres.get(i).getNombre());
+            cbNombre.addItem(nombres.get(i));
         }
+       
     }//GEN-LAST:event_rbEventoActionPerformed
 
     private void rbActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbActividadActionPerformed
         // TODO add your handling code here:
-        ArrayList<Actividad> nombres = depa.buscarNombreA(String.valueOf(jComboBox1.getSelectedItem()));
+        
+        ArrayList<String> nombres = depa.nombresActividades(String.valueOf(jComboBox1.getSelectedItem()));
         for(int i=0; i<nombres.size(); i++){
-            cbNombre.addItem(nombres.get(i).getNombre());
+            cbNombre.addItem(nombres.get(i));
         }
+       
     }//GEN-LAST:event_rbActividadActionPerformed
 
     private void cbNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNombreActionPerformed
@@ -677,6 +688,8 @@ public class MeetGUI extends javax.swing.JFrame {
             double x=depa.calificacionL(criterio);
             
         }
+        */
+
 
 
          
@@ -690,8 +703,8 @@ public class MeetGUI extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        Restaurante[] res = depa.convertirR();
-        gr.crearGrafica(res);
+       Restaurante[] res = depa.convertirR();
+       gr.crearGrafica(res);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

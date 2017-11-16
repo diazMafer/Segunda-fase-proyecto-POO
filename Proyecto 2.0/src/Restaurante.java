@@ -1,4 +1,7 @@
 
+import org.mongodb.morphia.annotations.Entity;
+
+
 
 /**
  * Modela las caracteristicas especificas de un restaurante
@@ -6,6 +9,7 @@
  * @author Francisco Molian 17050
  * @version 19/10/2017
  */
+@Entity
 public class Restaurante extends Lugar {
     private String telefono;
     private String horario;
@@ -30,7 +34,7 @@ public class Restaurante extends Lugar {
         this.telefono = telefono;
         this.horario= horario;
     }
-    
+    public Restaurante(){}
     /**
     * Metodo para obtener el horario del restaurante
     * @return: retorna nombre de restaurante.

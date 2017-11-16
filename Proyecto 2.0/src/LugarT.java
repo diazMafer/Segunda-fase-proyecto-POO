@@ -1,3 +1,6 @@
+
+import org.mongodb.morphia.annotations.Entity;
+
 /**
     * Modela las caracteristicas principales para poder un lugar turistico 
     * 
@@ -5,6 +8,7 @@
     * @version 13/09/2017
     
 */
+@Entity 
 
 public class LugarT extends Lugar{
 	//Atributos 
@@ -22,6 +26,8 @@ public class LugarT extends Lugar{
             super(nombre, direccion, departamento, descripcion, calificacion, c1, c2, c3, c4, c5);
             this.horario=horario;
 	}
+        
+        public LugarT(){}
 
         /**
          * Metodo para obtener el horario del lugar turistico

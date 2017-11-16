@@ -1,3 +1,6 @@
+
+import org.mongodb.morphia.annotations.Entity;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +11,7 @@
  *
  * @author Mafer
  */
+@Entity
 public class Hotel extends Lugar {
     //Atributos 
      private String correo;
@@ -33,6 +37,10 @@ public class Hotel extends Lugar {
         this.telefono = telefono;
         this.correo = correo;
     }
+    
+    
+    public Hotel() {}
+    
     
     /**
     * @return: retorna correo de hotel.

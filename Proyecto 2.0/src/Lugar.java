@@ -1,10 +1,16 @@
 
+import org.bson.types.ObjectId;
+import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
+
 /**
  * Modela las caracteristica de un lugar al cual una turista puede viajar 
  * @author Maria Fernanda Lopez 17160
  * @author Francisco Molina 17050
  * @version 19/10/2017
  */
+@Entity
 public class Lugar {
     //Atributos
     protected String nombre;
@@ -17,6 +23,7 @@ public class Lugar {
     protected int c4;
     protected int c5;
     protected String descripcion;
+    @Id protected ObjectId id;
     
     /**
      * Constructor for objects of class Lugar
@@ -43,6 +50,9 @@ public class Lugar {
         this.departamento=departamento;
         this.calificacion=calificacion;
     }
+    
+    public Lugar(){}
+    
     
     /**
          * Metodo para obtener la direccion del restaurante

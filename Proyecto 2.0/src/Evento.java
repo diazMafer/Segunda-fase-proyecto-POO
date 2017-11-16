@@ -1,10 +1,14 @@
+
+import java.util.Date;
+import org.mongodb.morphia.annotations.Embedded;
+
 /**
 * Modela las caracteristicas principales para poder realizar y promocionar un evento 
 *@author María Fernanda López, Francisco Molina
 *@version 11/08/2017
     
 */
-
+@Embedded 
 public class Evento{
 	//Atributos 
 	private String nombre;
@@ -13,7 +17,7 @@ public class Evento{
 	private String descripcion; 
 	private String horario; 
 	private String departamento;
-        private String fecha;
+        private Date fecha;
 
 	/**
          * Constructor for objects of class Evento
@@ -24,7 +28,7 @@ public class Evento{
          * @param horario
          * @param departamento 
          */
-	public Evento(String nombre, String tipo, String lugar, String descripcion, String horario, String departamento, String fecha){
+	public Evento(String nombre, String tipo, String lugar, String descripcion, String horario, String departamento, Date fecha){
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.lugar = lugar;
@@ -80,6 +84,10 @@ public class Evento{
 	public String getDepartamento(){
 		return departamento;
 	}
+        
+        public Date getFecha(){
+            return fecha;
+        }
         
         @Override
         public String toString() {

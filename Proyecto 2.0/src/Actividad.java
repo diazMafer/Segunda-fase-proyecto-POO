@@ -1,3 +1,6 @@
+
+import org.mongodb.morphia.annotations.Entity;
+
 /**
     * Modela las caracteristicas principales de una actividad turistica
     * 
@@ -6,7 +9,7 @@
     @version 11/08/2017
     
 */
-
+@Entity 
 public class Actividad extends Lugar{
 	//Atributos
 	private String tipo;
@@ -19,6 +22,8 @@ public class Actividad extends Lugar{
             this.tipo=tipo;
             
 	}
+        
+        public Actividad (){}
 
 	//gets
 
